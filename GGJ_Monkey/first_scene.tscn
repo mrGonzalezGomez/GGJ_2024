@@ -1,0 +1,181 @@
+[gd_scene load_steps=6 format=3 uid="uid://bc4ws025nal84"]
+
+[ext_resource type="Script" path="res://GGJ_Monkey/first_scene.gd" id="1_ht3s2"]
+[ext_resource type="Texture2D" uid="uid://dr1svm14t6bi4" path="res://GGJ_Monkey/GGJ_MonkeyScene_BG.jpg" id="2_rlty3"]
+[ext_resource type="Texture2D" uid="uid://wevpqbpses4v" path="res://PlayText/Q_Hover.png" id="5_bv4r6"]
+[ext_resource type="Texture2D" uid="uid://b7upqvwaviics" path="res://presentateur.png" id="6_2gio5"]
+
+[sub_resource type="Theme" id="Theme_jy3kh"]
+default_font_size = 60
+
+[node name="Firstscene" type="Node2D"]
+script = ExtResource("1_ht3s2")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_rlty3")
+
+[node name="ButtonQuit" type="Button" parent="."]
+offset_left = 1821.0
+offset_top = 1059.0
+offset_right = 1829.0
+offset_bottom = 1067.0
+theme = SubResource("Theme_jy3kh")
+metadata/_edit_lock_ = true
+
+[node name="QuitScript" type="TextureButton" parent="ButtonQuit"]
+layout_mode = 0
+offset_left = -73.0
+offset_top = -132.0
+offset_right = 191.0
+offset_bottom = 132.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("5_bv4r6")
+texture_pressed = ExtResource("5_bv4r6")
+texture_hover = ExtResource("5_bv4r6")
+texture_disabled = ExtResource("5_bv4r6")
+texture_focused = ExtResource("5_bv4r6")
+
+[node name="FirstQuestion" type="VBoxContainer" parent="."]
+offset_left = 56.0
+offset_top = 789.0
+offset_right = 1696.0
+offset_bottom = 1079.0
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="AnswerOneOne" type="Button" parent="FirstQuestion"]
+custom_minimum_size = Vector2(1090, 80)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Quel est le comble pour un joueur de bowling ? De perdre la boule !"
+
+[node name="AnswerOneTwo" type="Button" parent="FirstQuestion"]
+custom_minimum_size = Vector2(1090, 80)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Toi là t'as l'air épuisé, t'as été chercher l'eau dans le puit pour ta tribu ?"
+
+[node name="AnswerOneThree" type="Button" parent="FirstQuestion"]
+custom_minimum_size = Vector2(1090, 80)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Comment reconnaît-on un gorille qui sonne à la porte ? Ça fait King-Kong !"
+
+[node name="SecondQuestion" type="VBoxContainer" parent="."]
+visible = false
+offset_left = 59.0
+offset_top = 785.0
+offset_right = 1699.0
+offset_bottom = 1075.0
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="AnswerTwoOne" type="Button" parent="SecondQuestion"]
+custom_minimum_size = Vector2(1090, 80)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Qu'est-ce qui est invisible et qui sent la banane? Un pet de singe"
+
+[node name="AnswerTwoTwo" type="Button" parent="SecondQuestion"]
+custom_minimum_size = Vector2(1090, 80)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Comment appelle-t-on un singe qui boit de l'alcool ? 
+"
+
+[node name="AnswerTwoThree" type="Button" parent="SecondQuestion"]
+custom_minimum_size = Vector2(1090, 80)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Je crois m'être trompé d'endroit, je ne pensais pas me produire dans un KFC."
+
+[node name="ThirdQuestion" type="VBoxContainer" parent="."]
+visible = false
+offset_left = 59.0
+offset_top = 785.0
+offset_right = 1699.0
+offset_bottom = 1075.0
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="AnswerThirdOne" type="Button" parent="ThirdQuestion"]
+custom_minimum_size = Vector2(1090, 80)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Un singe voit un vieil ami. Il lui dit...tu m'as monkey."
+
+[node name="AnswerThirdTwo" type="Button" parent="ThirdQuestion"]
+custom_minimum_size = Vector2(1090, 80)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Je pensais vous trouver à la CAF plutôt qu'à mon sketch."
+
+[node name="AnswerThirdThree" type="Button" parent="ThirdQuestion"]
+custom_minimum_size = Vector2(1090, 80)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "C'est toute ta famille là devant ? Le type remplit toute la salle avec ses gosses. "
+
+[node name="FourthQuestion" type="VBoxContainer" parent="."]
+visible = false
+custom_minimum_size = Vector2(1090, 80)
+offset_left = 71.0
+offset_top = 749.0
+offset_right = 1755.0
+offset_bottom = 1077.0
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="AnswerFourthOne" type="Button" parent="FourthQuestion"]
+custom_minimum_size = Vector2(1090, 80)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "OUH OUH OUH OUGA"
+
+[node name="AnswerFourthTwo" type="Button" parent="FourthQuestion"]
+custom_minimum_size = Vector2(1090, 80)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Je ne m'attendais pas à vous voir ici, vos cages ont été laissées ouvertes aujourd'hui ?"
+
+[node name="AnswerFourthThree" type="Button" parent="FourthQuestion"]
+custom_minimum_size = Vector2(1090, 80)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Comment les singes communiquent-ils entre eux ? 
+Ils utilisent le réseau \"Banane-twork\" !"
+
+[node name="Presentateur" type="Sprite2D" parent="."]
+position = Vector2(306, 865)
+scale = Vector2(0.4675, 0.558594)
+texture = ExtResource("6_2gio5")
+flip_h = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 6.0
+one_shot = true
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+modulate = Color(0.333333, 0.823529, 0, 1)
+offset_left = 174.0
+offset_top = 622.0
+offset_right = 346.0
+offset_bottom = 649.0
+value = 50.0
+rounded = true
+
+[connection signal="pressed" from="ButtonQuit/QuitScript" to="." method="_on_quit_script_pressed"]
+[connection signal="pressed" from="FirstQuestion/AnswerOneOne" to="." method="_on_answer_one_one_pressed"]
+[connection signal="pressed" from="FirstQuestion/AnswerOneTwo" to="." method="_on_answer_one_two_pressed"]
+[connection signal="pressed" from="FirstQuestion/AnswerOneThree" to="." method="_on_answer_one_three_pressed"]
+[connection signal="pressed" from="SecondQuestion/AnswerTwoOne" to="." method="_on_answer_two_one_pressed"]
+[connection signal="pressed" from="SecondQuestion/AnswerTwoTwo" to="." method="_on_answer_two_two_pressed"]
+[connection signal="pressed" from="SecondQuestion/AnswerTwoThree" to="." method="_on_answer_two_three_pressed"]
+[connection signal="pressed" from="ThirdQuestion/AnswerThirdOne" to="." method="_on_answer_third_one_pressed"]
+[connection signal="pressed" from="ThirdQuestion/AnswerThirdTwo" to="." method="_on_answer_third_two_pressed"]
+[connection signal="pressed" from="ThirdQuestion/AnswerThirdThree" to="." method="_on_answer_third_three_pressed"]
+[connection signal="pressed" from="FourthQuestion/AnswerFourthOne" to="." method="_on_answer_fourth_one_pressed"]
+[connection signal="pressed" from="FourthQuestion/AnswerFourthTwo" to="." method="_on_answer_fourth_two_pressed"]
+[connection signal="pressed" from="FourthQuestion/AnswerFourthThree" to="." method="_on_answer_fourth_three_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

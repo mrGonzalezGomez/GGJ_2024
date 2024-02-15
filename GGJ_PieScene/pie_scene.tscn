@@ -1,0 +1,167 @@
+[gd_scene load_steps=6 format=3 uid="uid://bc4ws025nal84"]
+
+[ext_resource type="Script" path="res://GGJ_PieScene/pie_scene.gd" id="1_3oab4"]
+[ext_resource type="Texture2D" uid="uid://b5twf6dyk4jed" path="res://GGJ_PieScene/GGJ_PieScene_BG.jpg" id="1_x5hbs"]
+[ext_resource type="Texture2D" uid="uid://wevpqbpses4v" path="res://PlayText/Q_Hover.png" id="2_vbsce"]
+[ext_resource type="Texture2D" uid="uid://b7upqvwaviics" path="res://presentateur.png" id="4_ldoni"]
+
+[sub_resource type="Theme" id="Theme_mc1jl"]
+default_font_size = 60
+
+[node name="third_scene" type="Node2D"]
+script = ExtResource("1_3oab4")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_x5hbs")
+
+[node name="ButtonQuit" type="Button" parent="."]
+offset_left = 1821.0
+offset_top = 1059.0
+offset_right = 1829.0
+offset_bottom = 1067.0
+theme = SubResource("Theme_mc1jl")
+
+[node name="QuitScript" type="TextureButton" parent="ButtonQuit"]
+layout_mode = 0
+offset_left = -73.0
+offset_top = -132.0
+offset_right = 191.0
+offset_bottom = 132.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("2_vbsce")
+texture_pressed = ExtResource("2_vbsce")
+texture_hover = ExtResource("2_vbsce")
+texture_disabled = ExtResource("2_vbsce")
+texture_focused = ExtResource("2_vbsce")
+
+[node name="P_FirstQuestion" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(1090, 80)
+offset_left = 103.0
+offset_top = 807.0
+offset_right = 1743.0
+offset_bottom = 1075.0
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="P_Answer1-1" type="Button" parent="P_FirstQuestion"]
+custom_minimum_size = Vector2(1090, 80)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "caca qui pue"
+
+[node name="P_Answer1-2" type="Button" parent="P_FirstQuestion"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "caca qui pue"
+
+[node name="P_Answer1-3" type="Button" parent="P_FirstQuestion"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "caca qui pue"
+
+[node name="P_SecondQuestion" type="VBoxContainer" parent="."]
+visible = false
+offset_left = 59.0
+offset_top = 805.0
+offset_right = 1699.0
+offset_bottom = 1075.0
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="P_Answer2-1" type="Button" parent="P_SecondQuestion"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "caca"
+
+[node name="P_Answer2-2" type="Button" parent="P_SecondQuestion"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "zizi"
+
+[node name="P_Answer2-3" type="Button" parent="P_SecondQuestion"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "zizi"
+
+[node name="P_ThirdQuestion" type="VBoxContainer" parent="."]
+visible = false
+offset_left = 59.0
+offset_top = 807.0
+offset_right = 1699.0
+offset_bottom = 1075.0
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="P_Answer3-1" type="Button" parent="P_ThirdQuestion"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "zizi"
+
+[node name="P_Answer3-2" type="Button" parent="P_ThirdQuestion"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "zizi"
+
+[node name="P_Answer3-3" type="Button" parent="P_ThirdQuestion"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "zizi"
+
+[node name="P_FourthQuestion" type="VBoxContainer" parent="."]
+visible = false
+offset_left = 59.0
+offset_top = 801.0
+offset_right = 1699.0
+offset_bottom = 1075.0
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="P_Answer4-1" type="Button" parent="P_FourthQuestion"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "zizi"
+
+[node name="P_Answer4-2" type="Button" parent="P_FourthQuestion"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "c"
+
+[node name="P_Answer4-3" type="Button" parent="P_FourthQuestion"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "a"
+
+[node name="Presentateur" type="Sprite2D" parent="."]
+position = Vector2(290, 866)
+scale = Vector2(0.4675, 0.558594)
+texture = ExtResource("4_ldoni")
+flip_h = true
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+modulate = Color(0.333333, 0.823529, 0, 1)
+offset_left = 174.0
+offset_top = 622.0
+offset_right = 346.0
+offset_bottom = 649.0
+value = 50.0
+rounded = true
+
+[connection signal="pressed" from="ButtonQuit/QuitScript" to="." method="_on_quit_script_pressed"]
+[connection signal="pressed" from="P_FirstQuestion/P_Answer1-1" to="." method="_on_p_answer_11_pressed"]
+[connection signal="pressed" from="P_FirstQuestion/P_Answer1-2" to="." method="_on_p_answer_12_pressed"]
+[connection signal="pressed" from="P_FirstQuestion/P_Answer1-3" to="." method="_on_p_answer_13_pressed"]
+[connection signal="pressed" from="P_SecondQuestion/P_Answer2-1" to="." method="_on_p_answer_21_pressed"]
+[connection signal="pressed" from="P_SecondQuestion/P_Answer2-2" to="." method="_on_p_answer_22_pressed"]
+[connection signal="pressed" from="P_SecondQuestion/P_Answer2-3" to="." method="_on_p_answer_23_pressed"]
+[connection signal="pressed" from="P_ThirdQuestion/P_Answer3-1" to="." method="_on_p_answer_31_pressed"]
+[connection signal="pressed" from="P_ThirdQuestion/P_Answer3-2" to="." method="_on_p_answer_32_pressed"]
+[connection signal="pressed" from="P_ThirdQuestion/P_Answer3-3" to="." method="_on_p_answer_33_pressed"]
+[connection signal="pressed" from="P_FourthQuestion/P_Answer4-1" to="." method="_on_p_answer_41_pressed"]
+[connection signal="pressed" from="P_FourthQuestion/P_Answer4-2" to="." method="_on_p_answer_42_pressed"]
+[connection signal="pressed" from="P_FourthQuestion/P_Answer4-3" to="." method="_on_p_answer_43_pressed"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_timeout"]

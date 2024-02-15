@@ -1,0 +1,162 @@
+[gd_scene load_steps=6 format=3 uid="uid://bc4ws025nal84"]
+
+[ext_resource type="Texture2D" uid="uid://db7jukyx04rxs" path="res://GGJ_GoblinsScene/GGJ_GoblinsScene_BG.jpg" id="1_jsk56"]
+[ext_resource type="Script" path="res://GGJ_GoblinsScene/goblins_scene.gd" id="1_n6wf2"]
+[ext_resource type="Texture2D" uid="uid://wevpqbpses4v" path="res://PlayText/Q_Hover.png" id="2_b3dwr"]
+[ext_resource type="Texture2D" uid="uid://b7upqvwaviics" path="res://presentateur.png" id="3_8c2tv"]
+
+[sub_resource type="Theme" id="Theme_b024f"]
+default_font_size = 60
+
+[node name="sec_scene" type="Node2D"]
+script = ExtResource("1_n6wf2")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_jsk56")
+
+[node name="ButtonQuit" type="Button" parent="."]
+offset_left = 1821.0
+offset_top = 1059.0
+offset_right = 1829.0
+offset_bottom = 1067.0
+theme = SubResource("Theme_b024f")
+
+[node name="QuitScript" type="TextureButton" parent="ButtonQuit"]
+layout_mode = 0
+offset_left = -73.0
+offset_top = -132.0
+offset_right = 191.0
+offset_bottom = 132.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("2_b3dwr")
+texture_pressed = ExtResource("2_b3dwr")
+texture_hover = ExtResource("2_b3dwr")
+texture_disabled = ExtResource("2_b3dwr")
+texture_focused = ExtResource("2_b3dwr")
+
+[node name="FirstQuestion1" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(1090, 80)
+offset_left = 118.0
+offset_top = 802.0
+offset_right = 1758.0
+offset_bottom = 1072.0
+theme_override_constants/separation = 25
+
+[node name="AnswerOneOne" type="Button" parent="FirstQuestion1"]
+custom_minimum_size = Vector2(1090, 80)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Avec un nez pareil je comprends mieux pourquoi vous avez autant d'argent."
+
+[node name="AnswerOneTwo" type="Button" parent="FirstQuestion1"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "C'est toute ta famille là devant ? Le type remplit toute la salle avec ses gosses."
+
+[node name="AnswerOneThree" type="Button" parent="FirstQuestion1"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Je pensais vous trouver à la CAF plutôt qu'à mon sketch."
+
+[node name="SecondQuestion1" type="VBoxContainer" parent="."]
+visible = false
+offset_left = 123.0
+offset_top = 816.0
+offset_right = 1752.0
+offset_bottom = 1089.0
+theme_override_constants/separation = 25
+
+[node name="AnswerTwoOne" type="Button" parent="SecondQuestion1"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Avec un nez pareil je comprends mieux pourquoi vous avez autant d'argent."
+
+[node name="AnswerTwoTwo" type="Button" parent="SecondQuestion1"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Toi là t'as l'air épuisé, t'as été chercher l'eau dans le puit pour ta tribu ?"
+
+[node name="AnswerTwoThree" type="Button" parent="SecondQuestion1"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "C'est votre numéro de téléphone sur le bras ?"
+
+[node name="ThirdQuestion1" type="VBoxContainer" parent="."]
+visible = false
+offset_left = 95.0
+offset_top = 815.0
+offset_right = 1780.0
+offset_bottom = 1108.0
+theme_override_constants/separation = 25
+
+[node name="AnswerThirdOne" type="Button" parent="ThirdQuestion1"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Je vais peut-être calmer mes blagues avec vous, vu le nombre d'avocats dans la salle."
+
+[node name="AnswerThirdTwo" type="Button" parent="ThirdQuestion1"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Il manque plus qu'à refaire le sol en bleu et vous ferez un magnifique ciel étoilé"
+
+[node name="AnswerThirdThree" type="Button" parent="ThirdQuestion1"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Qui est jeune et ça attend, Jonathan."
+
+[node name="FourthQuestion1" type="VBoxContainer" parent="."]
+visible = false
+offset_left = 110.0
+offset_top = 814.0
+offset_right = 1761.0
+offset_bottom = 1092.0
+theme_override_constants/separation = 25
+
+[node name="AnswerFourthOne" type="Button" parent="FourthQuestion1"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Quoicoubeh"
+
+[node name="AnswerFourthTwo" type="Button" parent="FourthQuestion1"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "J'appelle un banquier : *la moitié de la salle décroche son téléphone*"
+
+[node name="AnswerFourthThree" type="Button" parent="FourthQuestion1"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "J'avais peur de l'odeur mais finalement vous n'avez pas gardé de traumatisme envers les douches."
+
+[node name="Presentateur1" type="Sprite2D" parent="."]
+position = Vector2(271, 865)
+scale = Vector2(0.4675, 0.558594)
+texture = ExtResource("3_8c2tv")
+flip_h = true
+
+[node name="Timer1" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+modulate = Color(0.333333, 0.823529, 0, 1)
+offset_left = 150.0
+offset_top = 623.0
+offset_right = 322.0
+offset_bottom = 650.0
+value = 50.0
+rounded = true
+
+[connection signal="pressed" from="ButtonQuit/QuitScript" to="." method="_on_quit_script_pressed"]
+[connection signal="pressed" from="FirstQuestion1/AnswerOneOne" to="." method="_on_answer_one_one_pressed"]
+[connection signal="pressed" from="FirstQuestion1/AnswerOneTwo" to="." method="_on_answer_one_two_pressed"]
+[connection signal="pressed" from="FirstQuestion1/AnswerOneThree" to="." method="_on_answer_one_three_pressed"]
+[connection signal="pressed" from="SecondQuestion1/AnswerTwoOne" to="." method="_on_answer_two_one_pressed"]
+[connection signal="pressed" from="SecondQuestion1/AnswerTwoTwo" to="." method="_on_answer_two_two_pressed"]
+[connection signal="pressed" from="SecondQuestion1/AnswerTwoThree" to="." method="_on_answer_two_three_pressed"]
+[connection signal="pressed" from="ThirdQuestion1/AnswerThirdOne" to="." method="_on_answer_third_one_pressed"]
+[connection signal="pressed" from="ThirdQuestion1/AnswerThirdTwo" to="." method="_on_answer_third_two_pressed"]
+[connection signal="pressed" from="ThirdQuestion1/AnswerThirdThree" to="." method="_on_answer_third_three_pressed"]
+[connection signal="pressed" from="FourthQuestion1/AnswerFourthOne" to="." method="_on_answer_fourth_one_pressed"]
+[connection signal="pressed" from="FourthQuestion1/AnswerFourthTwo" to="." method="_on_answer_fourth_two_pressed"]
+[connection signal="pressed" from="FourthQuestion1/AnswerFourthThree" to="." method="_on_answer_fourth_three_pressed"]

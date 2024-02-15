@@ -1,0 +1,97 @@
+[gd_scene load_steps=12 format=3 uid="uid://6uoudc41hgxc"]
+
+[ext_resource type="Texture2D" uid="uid://c7b71tna063kp" path="res://MenuBG.webp" id="1_2iaur"]
+[ext_resource type="Script" path="res://main.gd" id="1_pr3fn"]
+[ext_resource type="Texture2D" uid="uid://bhu3cwnakdmsl" path="res://PlayText/P_Default.png" id="2_wp4hd"]
+[ext_resource type="Texture2D" uid="uid://b7upqvwaviics" path="res://presentateur.png" id="3_epa3x"]
+[ext_resource type="Texture2D" uid="uid://cnprniof13v" path="res://PlayText/P_Hover.png" id="3_jiyrj"]
+[ext_resource type="Texture2D" uid="uid://780u77hyysn7" path="res://DialogBoxes/buble.png" id="4_kymp6"]
+[ext_resource type="Texture2D" uid="uid://wevpqbpses4v" path="res://PlayText/Q_Hover.png" id="5_dc6r1"]
+[ext_resource type="Texture2D" uid="uid://bw1ioprcaddaw" path="res://GameLogo.png" id="8_m8fxd"]
+
+[sub_resource type="Theme" id="Theme_txbxp"]
+default_font_size = 60
+
+[sub_resource type="Theme" id="Theme_lo7u1"]
+default_font_size = 60
+
+[sub_resource type="Theme" id="Theme_injo2"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_pr3fn")
+
+[node name="bg" type="Sprite2D" parent="."]
+position = Vector2(957, 421)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_2iaur")
+metadata/_edit_lock_ = true
+
+[node name="Button" type="Button" parent="."]
+offset_left = 932.0
+offset_top = 457.0
+offset_right = 950.0
+offset_bottom = 475.0
+theme = SubResource("Theme_txbxp")
+
+[node name="button_script_1" type="TextureButton" parent="Button"]
+layout_mode = 0
+offset_left = -129.0
+offset_top = -102.0
+offset_right = 375.0
+offset_bottom = 162.0
+scale = Vector2(0.7, 0.7)
+texture_normal = ExtResource("2_wp4hd")
+texture_pressed = ExtResource("3_jiyrj")
+texture_hover = ExtResource("3_jiyrj")
+texture_disabled = ExtResource("2_wp4hd")
+texture_focused = ExtResource("3_jiyrj")
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 1002.0
+offset_top = 654.0
+offset_right = 1010.0
+offset_bottom = 662.0
+theme = SubResource("Theme_lo7u1")
+
+[node name="button_script_2" type="TextureButton" parent="Button2"]
+layout_mode = 0
+offset_left = -106.0
+offset_top = -108.0
+offset_right = 158.0
+offset_bottom = 156.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("5_dc6r1")
+texture_pressed = ExtResource("5_dc6r1")
+texture_hover = ExtResource("5_dc6r1")
+texture_disabled = ExtResource("5_dc6r1")
+texture_focused = ExtResource("5_dc6r1")
+
+[node name="Presentateurpixel2" type="Sprite2D" parent="."]
+position = Vector2(1500, 717)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_epa3x")
+
+[node name="Buble*" type="Sprite2D" parent="."]
+position = Vector2(1819, 686)
+texture = ExtResource("4_kymp6")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 1631.0
+offset_top = 494.0
+offset_right = 1771.0
+offset_bottom = 529.0
+theme = SubResource("Theme_injo2")
+theme_override_colors/background_color = Color(1, 1, 1, 1)
+theme_override_colors/font_readonly_color = Color(0, 0, 0, 1)
+text = "   Wanna play ?"
+editable = false
+selecting_enabled = false
+drag_and_drop_selection_enabled = false
+
+[node name="logo" type="Sprite2D" parent="."]
+position = Vector2(975, 164)
+texture = ExtResource("8_m8fxd")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button/button_script_1" to="." method="_on_button_script_1_pressed"]
+[connection signal="pressed" from="Button2/button_script_2" to="." method="_on_button_script_2_pressed"]
