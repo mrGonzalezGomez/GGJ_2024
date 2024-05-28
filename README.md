@@ -20,8 +20,7 @@ To run "Jokes on You," you'll need to have Godot Engine installed on your comput
 4. Once the project is open in Godot, you can run it by pressing F5 or selecting "Play" from the top menu.
 
 ## Usage
-After launching "Jokes on You," navigate through the game/application using your mouse or keyboard inputs. The game is designed to be intuitive, but here are some tips to get started:
-- [Include specific instructions on gameplay, navigating menus, or any other usage instructions necessary.]
+After launching "Jokes on You," navigate through the game/application using your mouse or keyboard inputs. The game is designed to be intuitive.
 
 ## Contributing
 We welcome contributions to "Jokes on You"! If you're interested in improving the game or suggesting new features, please follow these steps:
